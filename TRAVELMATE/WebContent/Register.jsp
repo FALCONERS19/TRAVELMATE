@@ -154,8 +154,8 @@ width: 186px;
 <input type="text" name="id" placeholder="Card Id number" class="igt" id="card">
 <br>
 <br>
-<label class="radio"><b>Male</b> <input type="radio" name="gen" onclick="ADD(this.value)"></label>
-<label class="radio"><b>Female </b><input type="radio" name="gen" onclick="ADD(this.value)"></label>
+<label class="radio"><b>Male</b> <input type="radio" name="gen"  onclick="ADD(this.value)"></label>
+<label class="radio"><b>Female </b><input type="radio" name="gen"  onclick="ADD(this.value)"></label>
 <input type="text" name="dob" class="dat" placeholder="DD/MM/YYYY">
 <br>
 <input type="text" name="add" placeholder="Address" class="email" id="add">

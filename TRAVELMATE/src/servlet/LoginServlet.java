@@ -28,7 +28,7 @@ public class LoginServlet extends HttpServlet {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","system");
 			Statement stat=con.createStatement();
-			ResultSet rs=stat.executeQuery("select * from SRI.REGISTRATIONFORM where USERID='"+u1+"'and password='"+p1+"'");
+			ResultSet rs=stat.executeQuery("select * from PROJECT.REGISTRATION2 where USERID='"+u1+"'and password='"+p1+"'");
 			if(rs.next())
 			{
 				response.sendRedirect("Home.jsp");
