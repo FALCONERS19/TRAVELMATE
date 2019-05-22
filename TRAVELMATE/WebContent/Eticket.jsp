@@ -301,7 +301,7 @@ margin-bottom: -9px;
 </style>
 </head>
 <body>
-<form name="RegForm" action="TicketServlet" method="post">
+<form name="RegForm" action="BookServlet" method="post">
 		<div class="main">
 			<div class="logo">
 				<img src="Images/Tlogo1.png" alt="TravelMate">

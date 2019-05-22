@@ -14,7 +14,7 @@ box-sizing: border-box;
 font-family: Century Gothic;
 }
 body{
-background-image: url('./Images/euro.jpg');
+background-image: url('./Images/uro.jpg');
 background-attachment: fixed;
 	background-position: center;
 	background-size: cover;
