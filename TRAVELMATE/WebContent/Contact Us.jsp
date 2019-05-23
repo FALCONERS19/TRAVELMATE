@@ -4,16 +4,55 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Home page</title>
-<style type="text/css">
-* {
-	margin: 0;
-	padding: 0;
-	font-family: century Gothic;
+<title>Contact Us</title>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<style>
+*{
+margin:0;
+padding:0;
+font-family: Century Gothic;
 }
-
+body{
+background-image: url('./Images/white.jpg');
+background-position: center;
+background-attachment: fixed;
+background-size:cover;
+}
+.middle{
+position:absolute;
+top:80%;
+transform:translateY(-50%);
+width:100%;
+text-align: center;
+margin-left: 20%;
+}
+.btn{
+display: inline-block;
+width:90px;
+height: 90px;
+background: #f1f1f1;
+margin:10px;
+border-radius:50%;
+box-shadow:0 5px 15px -5px #00000070;
+color:#22a7f0;
+overflow: hidden;
+position: relative;
+}
+.btn i{
+line-height: 90px;
+font-size: 26px;
+transition: 0.2 e;
+}
+.btn:hover i{
+width:100%;
+height:100%;
+transform: scale(1.3);
+color: #f1f1f1;
+background: #22a7f0;
+transform: rotate(360deg);
+transition-duration: 0.5s;
+}
 header {
-	background-image: url('./Images/road1.jpg');
 	height: 100vh;
 	background-size: cover;
 	background-position: center;
@@ -27,20 +66,23 @@ ul {
 
 ul li {
 	display: inline-block;
+	
 }
 
 ul li a {
 	text-decoration: none;
-	color: #fff;
+	color: #000;
 	padding: 5px 20px;
-	border: 1px solid #fff;
+	border: 1px solid #000;
 	transition: 0.6s ease;
 	border-radius: 20px;
+	
 }
 
 ul li a:hover {
-	background-color: #fff;
+	background-color: #22a7f0;
 	color: #000;
+	border:none;
 }
 
 ul li.active a {
@@ -70,6 +112,7 @@ ul li ul li {
 
 ul li:hover ul li {
 	display: block;
+	border:none;
 }
 
 .logo {
@@ -77,9 +120,11 @@ ul li:hover ul li {
 	height:5px;
 	border-radius: 50%;
 	right: calc(50% - 50px);
+	margin-top:-10px;
+	color: #000;
 }
 .logo img{
-width: 250px;
+width: 220px;
 height: 150px;
 }
 
@@ -87,53 +132,18 @@ height: 150px;
 	max-width: 1200px;
 	margin: auto;
 }
-
-.title {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-}
-
-.title h1 {
-	color: #fff;
-	font-size: 70px;
-}
-
-.button {
-	position: absolute;
-	top: 62%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-}
-
-.btn {
-	border: 1px solid #fff;
-	padding: 10px 30px;
-	color: #fff;
-	text-decoration: none;
-	border-radius: 20px;
-	transition: 0.6s ease;
-}
-
-.btn:hover {
-	background-color: #fff;
-	color: #000;
-}
 .sub{
  margin-bottom: -9px;
 }
 .asub{
 margin-bottom: -9px;
 }
-
 </style>
+
 </head>
 <body>
-<form action="">
-<header>
-	<div class="container">
-		<div class="main">
+<form>
+<div class="main">
 			<div class="logo">
 				<img src="Images/Tlogo1.png" alt="TravelMate">
 			</div>
@@ -151,20 +161,26 @@ margin-bottom: -9px;
 						
 					</ul></li>
 				<li><a href="Gallery.jsp"><b>Gallery</b></a></li>
-				<li><a href="Contactus.jsp"><b>Contact Us</b></a></li>
+				<li><a href="Cont.jsp"><b>Contact Us</b></a></li>
 
 			</ul>
 		</div>
-		<div class="title">
-			<h1>TO TRAVEL</h1>
-		</div>
-		<div class="button">
-			<a href="Login.jsp" class="btn"><b>LOGIN</b></a> <a href="Reg.jsp"
-				class="btn"><b>REGISTER</b></a>
-		</div>
-	</div>
-	</header>
+<div class="middle">
+<a class="btn" href="#">
+<i class="fab fa-facebook-f"></i>
+</a>
+<a class="btn" href="#">
+<i class="fab fa-twitter"></i>
+</a>
+<a class="btn" href="#">
+<i class="fab fa-whatsapp"></i>
+</a>
+<a class="btn" href="#">
+<i class="fas fa-envelope"></i>
+</a>
+</div>
 
 </form>
+
 </body>
 </html>

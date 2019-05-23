@@ -8,8 +8,38 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Billing</title>
+<style type="text/css">
+<style>
+*{
+margin:0;
+padding:0;
+font-family: century gothic;
+}
+body{
+width:100%;
+height:auto;
+
+
+}
+.btn{
+margin-top: 20%;
+margin-left: 50%;
+width:100px;
+height: 100px;
+}
+
+
+</style>
 </head>
 <body>
-<table>
 <form>
+<div class="btn">
+<button class=""><a href="Eticket.jsp">Back</a></button>
+
+<button class=""><a href="Payment.jsp">Pay</a></button>
+</div>
+</form>
+
+</body>
+</html>
 

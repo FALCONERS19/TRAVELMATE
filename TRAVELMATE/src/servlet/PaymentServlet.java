@@ -1,6 +1,7 @@
 package servlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -43,33 +44,40 @@ public class PaymentServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		//doGet(request, response);
 		
-	try
-	{
-		
-	
-		 Class.forName("oracle.jdbc.driver.OracleDriver");
+		PrintWriter out=response.getWriter();
+		String card_holder=request.getParameter("card_holder");
+		String card_type=request.getParameter("card_type");
+		String card_number=request.getParameter("card_number");
+		String expiry_date=request.getParameter("expiry_date");
+		String cvv=request.getParameter("cvv");
+		int result=0;
+		try {
+		 DriverManager.registerDriver(new oracle.jdbc.driver.OracleDriver());
 		 Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","system");
-		 String sql="select TICKETID,NOOFPERSON from project.TRAVELINFO where TICKETID=?";
-		 PreparedStatement stat=con.prepareStatement(sql);
-		 stat.setInt(1,tbid);
-		 ResultSet rs=stat.executeQuery();
-		 while(rs.next())
-		 {
-		  tbid=rs.getInt("TB_ID");
-		 %>
-		 <tr><td><%Random r=new Random();
-		 int n=r.nextInt();
-		 out.print("UR Bill ID : "+n+"<br>");
-		 out.print("No of Passengers :"+rs.getInt(2));
-		 }
-		 catch(Exception e)
-		 {
-			 
-		 }
+		 
+		String sql="insert into Project.paymentdetail values(?,?,?,?,?)";
+		PreparedStatement pr=con.prepareStatement(sql);
+
+		pr.setString(1,card_holder);
+		pr.setString(2,card_type);
+		pr.setString(3,card_number);
+		pr.setString(4,expiry_date);
+		pr.setString(5,cvv);
+		result=pr.executeUpdate();
+		if(result>0)
+		{
+		 out.println("<html><body>DataInserted Successfully</body></html>");
+		}
+		} catch (Exception e) {
+		// TODO: handle exception
+		 e.printStackTrace();
+		}
+		}
 		
+
 	}
 
-}
+
 	
 	
 	

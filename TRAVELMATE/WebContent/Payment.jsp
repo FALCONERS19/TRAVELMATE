@@ -103,6 +103,7 @@ text-align: center;
 color:#f8f8f8;
 border-radius:5px;
 cursor: pointer;
+border: none;
 }
 .payment-logo{
 position: absolute;
@@ -170,6 +171,7 @@ position: absolute;
 </style>
 </head>
 <body>
+<form action="PaymentServlet" method="post">
 <div class="wrapper">
 		<div class="payment">
 		<!-- <div class="payment-logo">
@@ -210,11 +212,12 @@ position: absolute;
 					<i class="fas fa-lock"></i>
 				</div>
 				</div>
-				<div class="btn">
-				PAY
+				<div >
+				<button class="btn">PAY</button>
 				</div>
 			</div>
 		</div>
 	</div>
+	</form>
 </body>
 </html>
