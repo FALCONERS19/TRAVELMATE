@@ -6,6 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 <style>
+*{
+margin:0;
+padding:0;
+font-family: Century Gothic;
+
+}
 body{
 width:100%;
 height:100%;
@@ -13,13 +19,14 @@ height:100%;
 }
 .container {
   position: relative;
-  width: 100%;
+  width: 80%;
 }
 
 .image {
   display: block;
   width: 100%;
   height: 500px;
+margin-left: 13%;
 }
 
 .overlay {
@@ -27,11 +34,12 @@ height:100%;
   bottom: 100%;
   left: 0;
   right: 0;
-  background-color: #008CBA;
+  background-color:rgba(0,0,0,0.5);
   overflow: hidden;
   width: 100%;
   height:0;
   transition: .5s ease;
+  margin-left: 13%;
 }
 
 .container:hover .overlay {
@@ -64,14 +72,14 @@ font-size:30px;
 <div class="container">
   <img src="Images/road1.jpg" alt="Avatar" class="image">
   <div class="overlay">
-    <div class="text"><p>Hello World<p></div>
+    <div class="text"><p>E-ticket booking<p></div>
   </div>
   
 </div>
 <div class="container">
   <img src="Images/road1.jpg" alt="Avatar" class="image">
   <div class="overlay">
-    <div class="text"><p>Hello World<p></div>
+    <div class="text"><p>Cargo Services<p></div>
   </div>
   
 </div>
